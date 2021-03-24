@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import '../App.css'
 
 const GlobalStyle = createGlobalStyle`
 
@@ -11,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
     body{
         background: #1b1b1b;
         overflow-x: hidden;
-
     }
 `
 

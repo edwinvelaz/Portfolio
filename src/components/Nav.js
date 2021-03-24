@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import  { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import '../App.css';
 
 const Nav = () => {
     return (
@@ -12,7 +13,7 @@ const Nav = () => {
             </h1>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/work">Work</Link>
                 </li>
                 <li>
                     <Link to="/skills">Skills</Link>
@@ -32,20 +33,24 @@ const StyledNav = styled.nav`
     justify-content: space-between;
     align-items: center;
     padding: 1rem 15rem;
-    background: #282828;
+    background: transparent;
     position: sticky;
     top: 0;
     z-index:10;
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
     a {
         color: white;
         text-decoration: none;
+        font-size: 2rem;
     }
     ul{
         display: flex;
         list-style: none;
     }
     #logo{
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         font-weight: lighter;
     }
     li{

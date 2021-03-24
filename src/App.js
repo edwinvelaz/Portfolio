@@ -3,6 +3,7 @@ import React from 'react';
 import GlobalStyle from './components/GlobalStyle';
 //Pages
 import Home from './pages/Home';
+import Work from './pages/Work';
 import Contact from './pages/Contact';
 import Skills from './pages/Skills';
 import Nav from './components/Nav';
@@ -20,6 +21,9 @@ function App() {
       <Switch location={location} key={location.pathname}>
         <Route path='/' exact>
           <Home />
+        </Route>
+        <Route path='/work' exact>
+          <Work />
         </Route>
         <Route path='/skills' exact>
           <Skills />
