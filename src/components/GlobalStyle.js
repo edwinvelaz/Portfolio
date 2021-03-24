@@ -10,8 +10,9 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        background: #1b1b1b;
+        background: #000;
         overflow-x: hidden;
+        font-family: 'Lobster'
     }
 `
 

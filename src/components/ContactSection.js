@@ -1,5 +1,12 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import  { Link } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faFacebookSquare, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons' 
+
+library.add(faFacebookSquare)
+
 
 function ContactSection() {
     const [name, setName] = useState('')
@@ -18,11 +25,15 @@ function ContactSection() {
       }
     
       const handleSubmit = (event) => {
+          event.preventDefault();
+        setName('')
+        setEmail('')
+        setMessage('')
       }
     return (
         <StyledContact>
             <h1>Send me a message!</h1>
-            <form id="contact-form" onSubmit={handleSubmit} method="POST">
+            <form id="contact-form" onSubmit={handleSubmit}>
             <StyledName>
                 <label htmlFor="name">Name</label>
                 <input type="text" className="form-control" value={name} onChange={onNameChange} />
@@ -37,6 +48,29 @@ function ContactSection() {
             </StyledMessage>
             <button type="submit">Submit</button>
             </form>
+            <StyledFooter>
+                <h1>Connect With Me!</h1>
+                <StyledSocial>
+                    <a target='_blank' href="https://www.facebook.com/edwin.velazquez3" className='facebook'>        
+                    <FontAwesomeIcon size='6x' icon={faFacebookSquare} />
+                    </a>
+                    
+                    <a target='_blank' href="https://www.instagram.com/itsyaboyblink/?hl=en"
+                    className='instagram'>   
+                    <FontAwesomeIcon size='6x' icon={faInstagram} />
+                    </a>
+                    
+                    <a target='_blank' href="https://www.linkedin.com/in/edwin-velazquez-2a61771b4/"
+                    className='linkedin'>
+                    <FontAwesomeIcon size='6x' icon={faLinkedin} />
+                    </a>
+
+                    <a target='_blank' href="https://twitter.com/itsyaboyblink"
+                    className='twitter'>
+                    <FontAwesomeIcon size='6x' icon={faTwitter} />
+                    </a>
+                </StyledSocial>
+            </StyledFooter>
         </StyledContact>
     )
 }
@@ -48,19 +82,21 @@ const StyledContact = styled.div`
     align-items: center;
     flex-direction: column;
     min-height: 90vh;
+    padding: 5rem 10rem;
     h1{
         margin-bottom: 6rem;
         font-size: 8rem;
     }
     button{
         font-size: 1rem;
-        background: gray;
+        background: green;
         width: 100%;
         height: 5vh;
     }
 `
 
 const StyledName = styled.div`
+    margin-bottom: 1.5rem;
     label{
         font-size: 4rem;
     }
@@ -68,10 +104,12 @@ const StyledName = styled.div`
         width: 100%;
         height: 5vh;
         font-size: 20px;
+        margin-bottom: 1rem;
     }
 `
 
 const StyledEmail = styled.div`
+    margin-bottom: 1.2rem;
     label{
         font-size: 4rem;
     }
@@ -79,18 +117,50 @@ const StyledEmail = styled.div`
         width: 100%;
         height: 5vh;
         font-size: 20px;
+        margin-bottom: 1rem;
     }
 `
 
 const StyledMessage = styled.div`
-    min-height:10vh;
-    width: 100%;
     label{
         font-size: 4rem;
     }
-    input {
-        font-size: 20px;
+    textarea {
+        font-size: 30px;
         height: 10vh;
+        width: 100%;
+        margin-bottom: 2rem;
+        margin-top: .5rem;
+    }
+`
+
+const StyledFooter = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    h1{
+        font-size: 4rem;
+        margin-bottom: 5rem;
+        align-self: center;      
+    }
+    width: 100%;
+`
+const StyledSocial = styled.div`
+    /* border: 2px solid gray; */
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    .facebook{
+        color: #4267B2;
+    }
+    .instagram{
+        color: #C2239E;
+    }
+    .twitter{
+        color: lightblue;
+    }
+    .linkedin{
+        color: #0E76A8;
     }
 `
 
