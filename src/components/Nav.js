@@ -9,7 +9,7 @@ const Nav = () => {
     return (
         <StyledNav>
             <h1>
-                <Link id='logo' to="/"><FontAwesomeIcon icon={faHome}/></Link>
+                <Link id='logo' to="/home"><FontAwesomeIcon icon={faHome}/></Link>
             </h1>
             <ul>
                 <li>
@@ -33,7 +33,7 @@ const StyledNav = styled.nav`
     justify-content: space-between;
     align-items: center;
     padding: 1rem 15rem;
-    background: transparent;
+    background: black;
     position: sticky;
     top: 0;
     z-index:10;
