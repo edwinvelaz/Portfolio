@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import  { Link } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faFacebookSquare, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons' 
+import {faFacebookSquare, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import {titleAnim, fade} from '../animations';
+import {motion} from 'framer-motion';
 
 library.add(faFacebookSquare)
 
@@ -32,43 +34,43 @@ function ContactSection() {
       }
     return (
         <StyledContact>
-            <h1>Send me a message!</h1>
+            <motion.h1 variants={titleAnim}>Send me a message!</motion.h1>
             <form id="contact-form" onSubmit={handleSubmit}>
             <StyledName>
-                <label htmlFor="name">Name</label>
-                <input type="text" className="form-control" value={name} onChange={onNameChange} />
+                <motion.label variants={fade} htmlFor="name">Name</motion.label>
+                <motion.input variants={fade} type="text" className="form-control" value={name} onChange={onNameChange} />
             </StyledName>
             <StyledEmail>
-                <label htmlFor="exampleInputEmail1">Email address</label>
-                <input type="email" className="form-control" aria-describedby="emailHelp" value={email} onChange={onEmailChange} />
+                <motion.label variants={fade} htmlFor="exampleInputEmail1">Email address</motion.label>
+                <motion.input variants={fade} type="email" className="form-control" aria-describedby="emailHelp" value={email} onChange={onEmailChange} />
             </StyledEmail>
             <StyledMessage>
-                <label htmlFor="message">Message</label>
-                <textarea className="form-control" value={message} onChange={onMessageChange} />
+                <motion.label variants={fade} htmlFor="message">Message</motion.label>
+                <motion.textarea variants={fade}className="form-control" value={message} onChange={onMessageChange} />
             </StyledMessage>
-            <button type="submit">Submit</button>
+            <motion.button variants={fade}type="submit">Submit</motion.button>
             </form>
             <StyledFooter>
-                <h1>Connect With Me!</h1>
+                <motion.h1 variants={fade}>Connect With Me!</motion.h1>
                 <StyledSocial>
-                    <a target='_blank' href="https://www.facebook.com/edwin.velazquez3" className='facebook'>        
+                    <motion.a variants={fade} target='_blank' href="https://www.facebook.com/edwin.velazquez3" className='facebook'>        
                     <FontAwesomeIcon size='6x' icon={faFacebookSquare} />
-                    </a>
+                    </motion.a>
                     
-                    <a target='_blank' href="https://www.instagram.com/itsyaboyblink/?hl=en"
+                    <motion.a variants={fade} target='_blank' href="https://www.instagram.com/itsyaboyblink/?hl=en"
                     className='instagram'>   
                     <FontAwesomeIcon size='6x' icon={faInstagram} />
-                    </a>
+                    </motion.a>
                     
-                    <a target='_blank' href="https://www.linkedin.com/in/edwin-velazquez-2a61771b4/"
+                    <motion.a variants={fade} target='_blank' href="https://www.linkedin.com/in/edwin-velazquez-2a61771b4/"
                     className='linkedin'>
                     <FontAwesomeIcon size='6x' icon={faLinkedin} />
-                    </a>
+                    </motion.a>
 
-                    <a target='_blank' href="https://twitter.com/itsyaboyblink"
+                    <motion.a variants={fade} target='_blank' href="https://twitter.com/itsyaboyblink"
                     className='twitter'>
                     <FontAwesomeIcon size='6x' icon={faTwitter} />
-                    </a>
+                    </motion.a>
                 </StyledSocial>
             </StyledFooter>
         </StyledContact>

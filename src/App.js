@@ -10,7 +10,10 @@ import Start from './pages/Start'
 import Nav from './components/Nav';
 //Router
 import {Switch, Route, useLocation} from 'react-router-dom';
+//Components
 import ScrollTop from './components/ScrollTop';
+//Animation
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
 
@@ -21,23 +24,25 @@ function App() {
       <GlobalStyle />
       <ScrollTop />
       <Nav />
-      <Switch location={location} key={location.pathname}>
-        <Route path='/home' exact>
-          <Home />
-        </Route>
-        <Route path='/' exact>
-          <Start />
-        </Route>
-        <Route path='/work' exact>
-          <Work />
-        </Route>
-        <Route path='/skills' exact>
-          <Skills />
-        </Route>
-        <Route path='/contact' exact>
-          <Contact />
-        </Route>
-      </Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route path='/home' exact>
+            <Home />
+          </Route>
+          <Route path='/' exact>
+            <Start />
+          </Route>
+          <Route path='/work' exact>
+            <Work />
+          </Route>
+          <Route path='/skills' exact>
+            <Skills />
+          </Route>
+          <Route path='/contact' exact>
+            <Contact />
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </div>
   );
 }

@@ -1,15 +1,18 @@
 import React from 'react';
 import {StyledMain, StyledDescription} from '../styles';
 import myAvatar300 from '../img/myAvatar300.png';
+import {photoAnim, titleAnim} from '../animations';
+import {motion} from 'framer-motion';
+
 
 
 const HomeSection = () => {
     return (
         <StyledMain>
-            <img src={myAvatar300} alt=""/>
-            <h1>Edwin Velazquez</h1>
-            <h2>Fullstack Developer</h2>
-            <StyledDescription>
+            <motion.img variants={photoAnim} src={myAvatar300} alt=""/>
+            <motion.h1 variants={titleAnim}>Edwin Velazquez</motion.h1>
+            <motion.h2 variants={titleAnim}>Fullstack Developer</motion.h2>
+            <StyledDescription variants={titleAnim}>
                 <h3>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quam iusto iure minima aspernatur necessitatibus. Ut magnam similique aspernatur sunt molestiae laudantium sequi neque blanditiis, consectetur, vero quae delectus veniam!.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti tenetur sapiente distinctio quos pariatur nihil perferendis quam fugit dolorum! Non, dolore illum! Atque in praesentium aperiam ex adipisci voluptate vitae!

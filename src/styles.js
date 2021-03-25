@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import './App.css';
+import {motion} from 'framer-motion';
 
 
-export const StyledMain = styled.div`
+export const StyledMain = styled(motion.div)`
     min-height: 90vh;
     display: flex;
     align-items: center;
@@ -33,7 +34,7 @@ export const StyledMain = styled.div`
     font-weight: 400;
 `
 
-export const StyledDescription = styled.div`
+export const StyledDescription = styled(motion.div)`
     border: 1px solid white;
     border-radius: 1%;
     padding: 2rem;

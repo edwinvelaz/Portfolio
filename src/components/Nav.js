@@ -45,6 +45,9 @@ const StyledNav = styled.nav`
         text-decoration: none;
         font-size: 2rem;
     }
+    a:hover {
+        color: red;
+    }
     ul{
         display: flex;
         list-style: none;

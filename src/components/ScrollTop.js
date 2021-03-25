@@ -9,7 +9,7 @@ const ScrollTop = () => {
                 top: 0,
                 left: 0
             })
-        }, 10)
+        }, 500)
     },[pathname])
     return (
         <>
