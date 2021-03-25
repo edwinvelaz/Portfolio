@@ -1,10 +1,18 @@
 import React from 'react';
+import WorkSection from '../components/WorkSection';
+import {motion} from 'framer-motion';
+import { pageAnimation } from '../animations';
 
 const Work = () => {
     return (
-        <div>
-            <h1>Work</h1>
-        </div>
+        <motion.div
+            variants={pageAnimation}
+            initial='hidden'
+            animate='show'
+            exit='exit'
+        >
+            <WorkSection />
+        </motion.div>
     )
 }
 
