@@ -1,6 +1,6 @@
 import wavesproject from '../img/wavesproject.PNG';
 import captureportfolio from '../img/captureportfolio.PNG';
-
+import portfolio from '../img/portfolio.PNG';
 
 export const WorkData = () => {
     return [
@@ -15,6 +15,12 @@ export const WorkData = () => {
         mainImg: captureportfolio,
         description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quam iusto iure minima aspernatur necessitatibus. Ut magnam similique aspernatur sunt molestiae laudantium sequi neque blanditiis, consectetur, vero quae delectus veniam!.',
         url: 'https://github.com/edwinvelaz/capture-portfolio'
+      },
+      {
+        title: "Portfolio(You're on it!)",
+        mainImg: portfolio,
+        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quam iusto iure minima aspernatur necessitatibus. Ut magnam similique aspernatur sunt molestiae laudantium sequi neque blanditiis, consectetur, vero quae delectus veniam!.',
+        url: 'https://github.com/edwinvelaz/portfolio'
       },
     ]
 }
