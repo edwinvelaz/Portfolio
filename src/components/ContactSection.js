@@ -103,7 +103,7 @@ const StyledName = styled.div`
     input {
         width: 100%;
         height: 5vh;
-        font-size: 20px;
+        font-size: 30px;
         margin-bottom: 1rem;
     }
 `
@@ -116,7 +116,7 @@ const StyledEmail = styled.div`
     input {
         width: 100%;
         height: 5vh;
-        font-size: 20px;
+        font-size: 30px;
         margin-bottom: 1rem;
     }
 `
@@ -126,7 +126,7 @@ const StyledMessage = styled.div`
         font-size: 4rem;
     }
     textarea {
-        font-size: 30px;
+        font-size: 20px;
         height: 10vh;
         width: 100%;
         margin-bottom: 2rem;
@@ -137,7 +137,7 @@ const StyledMessage = styled.div`
 const StyledFooter = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 6rem;
     h1{
         font-size: 4rem;
         margin-bottom: 5rem;
